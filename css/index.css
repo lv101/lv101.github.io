@@ -1,0 +1,217 @@
+/*
+ * index文件的样式
+ */
+
+body {
+	/*min-width: 360px;*/
+	/*width: 1360px;*/
+	background-color: rgb(235,242,255);
+	font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.w{
+	width: 360px;
+	background-color: white;
+}
+
+.outer{
+	/*min-width: 476px;*/
+	width: 360px;
+	margin: auto;
+}
+
+.notice-bar{
+	float: left;
+	width: 360px;
+	line-height: 36px;
+	color: rgb(248,248,248);
+	background-color: rgb(219,219,219);
+}
+
+.time{
+	float: left;
+	margin-left: 10px;
+	font-family:"lucida console";
+}
+
+.state{
+	float: right;
+	margin-right: 10px;
+}
+
+.top-bar{
+	float: left;
+	/*top: 36px;*/
+	height: 72px;
+	/*position: relative;*/
+}
+
+.head-photo{
+	float: left;
+}
+
+.head-photo a{
+	display: block;
+}
+
+.head-photo img{
+	height: 50px;
+	margin: 10px;
+	border-radius: 25px;
+}
+
+.title, .more{
+	/*display: block;*/
+	line-height: 72px;
+	color: rgb(31,178,231);
+}
+
+.title{
+	float: left;
+	/*font-weight: 600;*/
+	font-size: 20px;
+	left: 100px;
+	position: relative;
+}
+
+.more{
+	float: right;
+	font-size: 40px;
+	margin-right: 10px;
+}
+
+.more:hover{
+	color: rgb(160,226,252);
+}
+
+.inner{
+	float: left;
+	height: 550px;
+}
+
+.search-bar-outer{
+	width: 340px;
+	line-height: 36px;
+	margin: 5px 10px;
+	background-color: rgb(243,243,243);
+	border-radius: 6px;
+}
+
+.search-bar{
+	text-align: center;
+	color: rgb(166,166,166);
+}
+
+.all_page{
+	height: 504px;
+	flex-flow: column nowrap;
+	overflow: auto;
+}
+
+.session{
+	height: 78px;
+	border-bottom: 1px solid rgb(223,225,225);
+}
+
+#message_info .session:hover{
+	background-color: rgb(227,227,227);
+}
+
+
+.session img{
+	float: left;
+	height: 66px;
+	margin: 6px 10px;
+	border-radius: 33px;
+}
+
+#nicknime{
+	float: left;
+	color: black;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	top: 20px;
+}
+
+#message{
+	float: left;
+	display: inline-block;
+	color: rgb(123,123,123);
+	position: relative;
+	top: 12px;
+	font-family:"lucida console";
+}
+
+#session-time{
+	float: right;
+	color: rgb(115,115,115);
+	margin-right: 10px;
+	font-family:"lucida console";
+}
+
+#contract_info{
+	float: left;
+	line-height: 36px;
+}
+
+#contract_info .inner_top{
+	line-height: 46px;
+	width: 350px;
+	padding-left: 10px;
+}
+
+#contract_info .inner_top:hover{
+	background-color: rgb(241,242,242);
+}
+
+#contract_info .inner_top1{
+	border-top: 1px solid rgb(223,225,224);
+}
+
+#contract_info .inner_top2{
+	border-top: 1px solid rgb(223,225,224);
+	border-bottom: 1px solid rgb(223,225,224);
+}
+
+#contract_info span:nth-child(1){
+	color: black;
+	font-size: 22px;
+}
+
+#contract_info span:nth-child(2){
+	float: right;
+	margin-right: 10px;
+	color: rgb(199,199,199);
+	font-size: 26px;
+}
+
+.bottom-bar{
+	float: left;
+	height: 72px;
+	position: relative;
+	bottom: 0px;
+	border-top: 1px solid rgb(215,219,220);
+}
+
+.s{
+	float: left;
+	width: 120px;
+	text-align: center;
+	padding: 10px 0px 6px 0px;
+	color: rgb(128,131,149);
+}
+
+.s i{
+	font-size: 36px;
+	margin-bottom: 4px;
+}
+
+.s:hover{
+	color: rgb(18,181,246) !important;
+}
+
