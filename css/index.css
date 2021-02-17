@@ -10,6 +10,7 @@ body {
 }
 
 a {
+	display: block;
 	text-decoration: none;
 }
 
@@ -42,13 +43,5 @@ img{
 .inner{
 	position: relative;
 	top: 200px;
-}
-
-#bdy{
-	display: block;
-	line-height: 60px;
-}
-
-#qq{
-	display: block;
+	line-height: 36px;
 }
