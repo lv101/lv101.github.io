@@ -5,19 +5,29 @@ window.onload = function(){
 	
 	var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
     var string1 = "abcdefghijklmnopqrstuvwxyz";
-    string1.split("");
-        var fontsize = 20;
+    var fontsize = 20;
+    var columns;
+    var drop = [];
+    
+	function Init(){
+		string1.split("");
+		canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         columns = canvas.width / fontsize;
-        var drop = [];
         for (var x = 0; x < columns; x++) {
             drop[x] = 0;
         }
- 
-        function drap() {
-            ctx.fillStyle = "rgba(0,0,0,0.07)";
+	}
+	
+	function ReInit(){
+		if((canvas.width!=window.innerWidth)||(canvas.height!=window.innerHeight)){
+			Init();
+		}
+	}
+	
+    function drap() {
+        ctx.fillStyle = "rgba(0,0,0,0.07)";
         ctx.fillRect(0, 0, canvas.width, canvas.height); //fillRect(x,y,width,height),x坐标、y坐标、width宽、height高
         ctx.fillStyle = "#0F0";
         ctx.font = fontsize + "px arial";
@@ -30,6 +40,7 @@ window.onload = function(){
             }
         }
     }
+    Init();
+    setInterval(ReInit, 1000);
     setInterval(drap, 20);
-	
 }
