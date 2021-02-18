@@ -1,7 +1,6 @@
 /*
  * index文件的样式
  */
-
 body {
 	/*min-width: 360px;*/
 	/*width: 1360px;*/
@@ -30,10 +29,17 @@ img{
 	width: 20px;
 }
 
+@font-face {
+	font-family: myFont;
+	src: url(../font/方正行楷简体.ttf);
+	/*src: url(../font/方正青铜体.ttf);*/
+}
+
 .outer{
 	width: 160px;
 	height: 360px;
 	font-size: 25px;
+	font-family: myFont;
 	/*border: 1px solid red;*/
 	margin: auto;
 	position: relative;
