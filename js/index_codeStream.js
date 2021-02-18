@@ -41,6 +41,6 @@ window.onload = function(){
         }
     }
     Init();
-    setInterval(ReInit, 1000);
+    setInterval(ReInit, 36);
     setInterval(drap, 20);
 }
