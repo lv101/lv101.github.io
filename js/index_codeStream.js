@@ -6,7 +6,7 @@ window.onload = function(){
 	var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var string1 = "abcdefghijklmnopqrstuvwxyz";
-    var fontsize = 20;
+    var fontsize = 10;
     var columns;
     var drop = [];
     
