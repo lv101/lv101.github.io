@@ -1,9 +1,8 @@
 window.onload = function(){
 	var coolStyle = document.getElementsByClassName("coolStyle")[0];
 	coolStyle.innerHTML = '<canvas id="canvas"></canvas>'
-	
+
 	function project3D(x,y,z,vars){
-	
 		var p,d;
 		x-=vars.camX;
 		y-=vars.camY-8;
@@ -38,56 +37,43 @@ window.onload = function(){
 			return { d:-1 };
 		}
 	}
-	
-	
+
 	function elevation(x,y,z){
-	
 		var dist = Math.sqrt(x*x+y*y+z*z);
 		if(dist && z/dist>=-1 && z/dist <=1) return Math.acos(z / dist);
 		return 0.00000001;
 	}
-	
-	
+
 	function rgb(col){
-	
 		col += 0.000001;
 		var r = parseInt((0.5+Math.sin(col)*0.5)*16);
 		var g = parseInt((0.5+Math.cos(col)*0.5)*16);
 		var b = parseInt((0.5-Math.sin(col)*0.5)*16);
 		return "#"+r.toString(16)+g.toString(16)+b.toString(16);
 	}
-	
-	
+
 	function interpolateColors(RGB1,RGB2,degree){
-		
 		var w2=degree;
 		var w1=1-w2;
 		return [w1*RGB1[0]+w2*RGB2[0],w1*RGB1[1]+w2*RGB2[1],w1*RGB1[2]+w2*RGB2[2]];
 	}
-	
-	
+
 	function rgbArray(col){
-	
 		col += 0.000001;
 		var r = parseInt((0.5+Math.sin(col)*0.5)*256);
 		var g = parseInt((0.5+Math.cos(col)*0.5)*256);
 		var b = parseInt((0.5-Math.sin(col)*0.5)*256);
 		return [r, g, b];
 	}
-	
-	
+
 	function colorString(arr){
-	
 		var r = parseInt(arr[0]);
 		var g = parseInt(arr[1]);
 		var b = parseInt(arr[2]);
 		return "#"+("0" + r.toString(16) ).slice (-2)+("0" + g.toString(16) ).slice (-2)+("0" + b.toString(16) ).slice (-2);
 	}
-	
-	
+
 	function process(vars){
-	
-	
 		if(vars.points.length<vars.initParticles) for(var i=0;i<5;++i) spawnParticle(vars);
 		var p,d,t;
 		
@@ -103,7 +89,6 @@ window.onload = function(){
 		
 		var t;
 		for(var i=0;i<vars.points.length;++i){
-			
 			x=vars.points[i].x;
 			y=vars.points[i].y;
 			z=vars.points[i].z;
@@ -119,9 +104,8 @@ window.onload = function(){
 			}
 		}
 	}
-	
+
 	function drawFloor(vars){
-		
 		var x,y,z,d,point,a;
 		for (var i = -25; i <= 25; i += 1) {
 			for (var j = -25; j <= 25; j += 1) {
@@ -165,9 +149,8 @@ window.onload = function(){
 	function sortFunction(a,b){
 		return b.dist-a.dist;
 	}
-	
+
 	function draw(vars){
-	
 		vars.ctx.globalAlpha=.15;
 		vars.ctx.fillStyle="#000";
 		vars.ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -192,10 +175,8 @@ window.onload = function(){
 		}
 		vars.points.sort(sortFunction);
 	}
-	
-	
+
 	function spawnParticle(vars){
-	
 		var p,ls;
 		pt={};
 		p=Math.PI*2*Math.random();
@@ -210,7 +191,6 @@ window.onload = function(){
 	}
 	
 	function frame(vars) {
-	
 		if(vars === undefined){
 			var vars={};
 			vars.canvas = document.querySelector("canvas");

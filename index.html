@@ -9,10 +9,6 @@
 		<link rel="icon" href="./favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index_codeStream.css"/>
-		<script type="text/javascript" src="js/index_codeStream.js"></script>
-		<!--<link rel="stylesheet" type="text/css" href="css/index_vortex.css"/>
-		<script type="text/javascript" src="js/index_vortex.js"></script>-->
 	</head>
 	<body>
 		<div class="coolStyle"></div>
@@ -24,5 +20,26 @@
 				<a id="blbl" href="http://81.68.136.162/BiliBili"><img src="img/bilibili.ico"/>哔哩哔哩</a>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var head = document.head || document.getElementsByTagName('head')[0];
+			var setScript = document.createElement("script");
+			var setLink = document.createElement("link");
+			var num = Math.floor(Math.random()*(1 - 0 + 1)) + 0;    // Math.floor(Math.random() * (n - m + 1)) + m;  [m,n]
+			
+			setScript.setAttribute("type", "text/javascript");
+			setLink.setAttribute("rel", "stylesheet");
+			setLink.setAttribute("type", "text/css");
+			if(num){
+				var src = "js/index_codeStream.js";
+				var href = "css/index_codeStream.css";
+			}else{
+				var src = "js/index_vortex.js";
+				var href = "css/index_vortex.css";
+			}
+			setScript.setAttribute("src", src);
+			setLink.setAttribute("href", href);
+			head.appendChild(setScript);
+			head.appendChild(setLink);
+		</script>
 	</body>
 </html>

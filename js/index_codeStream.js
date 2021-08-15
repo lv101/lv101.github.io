@@ -1,5 +1,4 @@
 window.onload = function(){
-	
 	var coolStyle = document.getElementsByClassName("coolStyle")[0];
 	coolStyle.innerHTML = '<canvas id="canvas"></canvas>'
 	
